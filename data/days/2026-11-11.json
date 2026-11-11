@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "summary": "ออกแบบและพัฒนาเว็บไซต์สรุปงานรายวัน",
+  "summary": "ออกแบบและพัฒนาเว็บไซต์สรุปงานรายวัน และพัฒนาระบบโครงสร้างหมวดหมู่สินค้า OnesiamFactory",
   "groups": [
     {
       "name": "Work Summary",
@@ -45,7 +45,23 @@
         {
           "name": "Backoffice",
           "tasks": [
-            { "id": "bo1", "title": "ตัวอย่างงานฝั่ง Backoffice", "status": "todo", "checked": false }
+            {
+              "id": "osf-bo-1",
+              "title": "พัฒนาระบบโครงสร้าง 12 หมวดหมู่สินค้า และหมวดหมู่ย่อย (Subcategories)",
+              "status": "done",
+              "checked": true,
+              "result": "เพิ่มระบบ 12 หมวดหลักตามเอกสาร Master Revision V2.2 และรองรับการเลือกหมวดย่อยแบบ Cascading Dropdown 2 ชั้นในระบบหลังบ้าน พร้อมแตก Branch และ Push ขึ้น GitLab สำเร็จ",
+              "notes": "ตรวจสอบด้วย TypeScript Check (tsc -b) และรัน Production Build (npm run build) ผ่าน 100%",
+              "tags": ["backend", "taxonomy"],
+              "subtasks": [
+                { "title": "เพิ่มชุดข้อมูลแม่บท 12 หมวดหลักและหมวดย่อยมาตรฐาน", "checked": true },
+                { "title": "อัปเดต Data Types รองรับฟิลด์ subcategory", "checked": true },
+                { "title": "ปรับฟอร์มเพิ่ม/แก้ไขสินค้าเป็น Cascading Dropdown 2 ชั้น", "checked": true },
+                { "title": "ปรับหน้าตารางสินค้า แสดง Badge และแถบฟิลเตอร์หมวดย่อย", "checked": true },
+                { "title": "จัดเตรียมสคริปต์ Auto-mapping สินค้าเดิม", "checked": true },
+                { "title": "แตก Branch feature/product-12-categories-taxonomy และ Push ขึ้น GitLab", "checked": true }
+              ]
+            }
           ]
         },
         {
