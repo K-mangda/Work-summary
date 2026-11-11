@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "summary": "พัฒนาเว็บไซต์กรณีศึกษา KUROKAWA Group (Blog ส่วนตัว) และพัฒนาระบบโครงสร้าง 12 หมวดหมู่สินค้า OnesiamFactory ทั้งฝั่ง Backoffice และ Frontend",
+  "summary": "พัฒนาเว็บไซต์กรณีศึกษา KUROKAWA Group, พัฒนาระบบ 12 หมวดหมู่สินค้า OnesiamFactory และรวบรวมข้อมูลกรณีศึกษาเว็บไซต์ต้นแบบ (Research & References)",
   "groups": [
     {
       "name": "Blog ส่วนตัว",
@@ -70,6 +70,62 @@
                 { "title": "แตก Branch แยกและ Push ขึ้น Remote: feature/product-12-categories-subcategories", "checked": true }
               ]
             }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "งานหาข้อมูล",
+      "tasks": [
+        {
+          "id": "res-1",
+          "title": "กรณีศึกษาเว็บไซต์ 3D Interactive & Product Configurator (HiveCPQ)",
+          "status": "done",
+          "checked": true,
+          "result": "วิเคราะห์ระบบปรับแต่งสินค้า 3 มิติ (CPQ - Configure, Price, Quote) แบบเรียลไทม์ จุดเด่นคือระบบแสดงผล 3D ตอบสนองลื่นไหล ผู้ใช้งานสามารถปรับเปลี่ยนพารามิเตอร์ อุปกรณ์ และพื้นผิวได้ทันทีพร้อมคำนวณราคาและออกสเปกแบบไดนามิก เหมาะอย่างยิ่งสำหรับใช้เป็นต้นแบบระบบปรับแต่งสินค้าโรงงาน/สถาปัตยกรรม",
+          "notes": "สามารถนำจุดเด่นเรื่อง Interactive 3D Viewport และโครงสร้างการจัดวาง Parameter Controls ด้านข้างไปประยุกต์ใช้กับระบบปรับแต่งแผ่นฟาซาดและหลังคาของ OnesiamFactory",
+          "tags": ["research", "3d", "configurator", "reference"],
+          "links": [
+            { "label": "เปิดดูตัวอย่างเว็บไซต์ 3D Configurator", "url": "https://hivecpqpublic.com/#/configurations/aed9410dcb9c76946780529379a5aed6?languageCode=en" }
+          ],
+          "subtasks": [
+            { "title": "ศึกษาการตอบสนองของ 3D Rendering Engine บนเบราว์เซอร์", "checked": true },
+            { "title": "วิเคราะห์โครงสร้างขั้นตอนการเลือก Option สินค้าควบคู่กับการอัปเดตโมเดล", "checked": true },
+            { "title": "สรุปแนวทางนำมาปรับใช้กับโมเดลชิ้นงานสินค้าอุตสาหกรรม", "checked": true }
+          ]
+        },
+        {
+          "id": "res-2",
+          "title": "กรณีศึกษาแพลตฟอร์มเผยแพร่บทความสากล (Medium / ILLUMINATION Publication)",
+          "status": "done",
+          "checked": true,
+          "result": "วิเคราะห์แพลตฟอร์มเผยแพร่บทความและการเขียนคอนเทนต์ระดับสากล ผ่านบทความ 'What Makes Us Human?' บน Publication ชื่อดัง ILLUMINATION จุดเด่นคือการจัดวาง Typography ที่เน้นการอ่านสบายตา (Readability สูงสุด), การสร้างความน่าเชื่อถือผ่าน Publication คัดกรองคุณภาพ, และการเข้าถึงฐานผู้อ่านทั่วโลก เหมาะสำหรับเป็นแนวทางยุทธศาสตร์บทความและการทำ Thought Leadership / CEO Branding",
+          "notes": "เป็นตัวอย่างการวางโครงสร้างบทความขนาดยาว (Long-form Content) ที่ดึงดูดผู้อ่าน พร้อมทั้งการเชื่อมโยงระบบ Social Engagement และ Profile ผู้เขียนที่ช่วยเสริมภาพลักษณ์แบรนด์บุคคล",
+          "tags": ["research", "blog", "medium", "content-strategy"],
+          "links": [
+            { "label": "อ่านบทความต้นฉบับบน Medium (ILLUMINATION)", "url": "https://medium.com/illumination/what-makes-us-human-a6ac186b2b64" }
+          ],
+          "subtasks": [
+            { "title": "วิเคราะห์สไตล์การจัดหน้าและ Typography สำหรับบทความระดับพรีเมียม", "checked": true },
+            { "title": "ศึกษาแนวทางการส่งบทความเข้า Publications ขนาดใหญ่เพื่อสร้าง Authority", "checked": true },
+            { "title": "นำรูปแบบการจัดวางรูปประกอบและการเว้นวรรคมาปรับใช้กับ Blog ส่วนตัว", "checked": true }
+          ]
+        },
+        {
+          "id": "res-3",
+          "title": "กรณีศึกษาระบบจัดสเปกและออกใบเสนอราคาสำเร็จรูป (Compute And More)",
+          "status": "done",
+          "checked": true,
+          "result": "วิเคราะห์ระบบจัดสเปกสินค้าและคำนวณราคาอัตโนมัติ (Custom Spec & Quotation Generator) จุดเด่นคือการแบ่งขั้นตอนการเลือกสินค้าเป็น Step-by-Step ชัดเจน ตรวจสอบความเข้ากันได้ของชิ้นส่วน มีฟังก์ชันคำนวณราคารวมทันที และมีปุ่มกดออกใบเสนอราคา/ใบสั่งซื้อสำเร็จรูปได้ในคลิกเดียว เหมาะเป็นต้นแบบสำหรับระบบคำนวณราคาและออกเอกสาร B2B",
+          "notes": "จุดแข็งคือความง่ายในการใช้งาน (Low friction) ผู้ใช้เลือกชิ้นส่วนเสร็จแล้วสามารถดาวน์โหลดหรือพิมพ์ใบเสนอราคาไปใช้งานได้ทันที ลดภาระงานของทีมขาย",
+          "tags": ["research", "quotation", "ecommerce", "spec-builder"],
+          "links": [
+            { "label": "เปิดดูระบบจัดสเปกและใบเสนอราคา (Compute And More)", "url": "https://computeandmore.com/custom-spec?step=2&selected_p_ids=20&selected_p_ids=19&selected_p_ids=5043" }
+          ],
+          "subtasks": [
+            { "title": "วิเคราะห์ขั้นตอน User Flow การเลือกสินค้าทีละสเต็ป (Wizard Experience)", "checked": true },
+            { "title": "ศึกษากระบวนการ Generate ใบเสนอราคาจากรายการสินค้าที่ถูกเลือก", "checked": true },
+            { "title": "สรุปโครงสร้างนำไปประยุกต์ใช้กับระบบออกใบเสนอราคาหน้าเว็บ", "checked": true }
           ]
         }
       ]
