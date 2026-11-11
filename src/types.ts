@@ -1,11 +1,17 @@
 export type Status = "todo" | "doing" | "done" | "blocked";
 export const STATUSES: Status[] = ["todo", "doing", "done", "blocked"];
 
+export interface LinkItem {
+  label: string;
+  url: string;
+}
+
 export interface Subtask {
   title: string;
   checked: boolean;
   note?: string;
 }
+
 export interface Task {
   id: string;
   title: string;
@@ -14,15 +20,18 @@ export interface Task {
   result?: string;
   notes?: string;
   tags?: string[];
+  links?: LinkItem[];
   subtasks?: Subtask[];
   compare?: { before: string; after: string; caption?: string };
 }
+
 /** หมวดงาน เช่น Blog, OnesiamFactory > Backoffice (ซ้อนกันได้หลายชั้น) */
 export interface Group {
   name: string;
   tasks?: Task[];
   groups?: Group[];
 }
+
 export interface Day {
   date: string;
   summary?: string;

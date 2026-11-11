@@ -24,6 +24,15 @@ function TaskRow({ t }: { t: Task }) {
         </div>
         {t.result && <p className="line"><b>ผลลัพธ์</b>{t.result}</p>}
         {t.notes && <p className="line"><b>หมายเหตุ</b>{t.notes}</p>}
+        {t.links && t.links.length > 0 && (
+          <div className="task-links">
+            {t.links.map((lk, i) => (
+              <a key={i} href={lk.url} target="_blank" rel="noreferrer" className="task-link-pill">
+                <span className="task-link-icon">↗</span> {lk.label}
+              </a>
+            ))}
+          </div>
+        )}
         {t.subtasks && t.subtasks.length > 0 && (
           <ul className="subs">
             {t.subtasks.map((s, i) => (
