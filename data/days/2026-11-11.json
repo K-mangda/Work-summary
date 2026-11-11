@@ -1,38 +1,7 @@
 {
   "date": "2026-11-11",
-  "summary": "พัฒนาเว็บไซต์กรณีศึกษา KUROKAWA Group, ปรับปรุงระบบหมวดหมู่สินค้า OnesiamFactory และพัฒนาเว็บไซต์สรุปงาน",
+  "summary": "พัฒนาเว็บไซต์กรณีศึกษา KUROKAWA Group และพัฒนาระบบโครงสร้างหมวดหมู่สินค้า OnesiamFactory",
   "groups": [
-    {
-      "name": "Work Summary",
-      "tasks": [
-        {
-          "id": "ws1",
-          "title": "วางแผนโครงสร้างเว็บไซต์",
-          "status": "done",
-          "checked": true,
-          "result": "ได้แผนครบ ทั้งโครงข้อมูล ฟีเจอร์ และแนวทางการออกแบบ",
-          "tags": ["plan"]
-        },
-        {
-          "id": "ws2",
-          "title": "พัฒนาหน้าเว็บ",
-          "status": "done",
-          "checked": true,
-          "result": "แสดงผลรายวัน แยกตามหมวดงาน",
-          "tags": ["web", "ui"],
-          "subtasks": [
-            { "title": "แถบเมนูด้านข้างเลือกวันที่", "checked": true },
-            { "title": "แยกหมวดงานและหมวดย่อย", "checked": true },
-            { "title": "สไลเดอร์เปรียบเทียบก่อน-หลัง", "checked": true }
-          ],
-          "compare": {
-            "before": "assets/2026-11-11/before.svg",
-            "after": "assets/2026-11-11/after.svg",
-            "caption": "เปรียบเทียบหน้าตาก่อนและหลังปรับดีไซน์"
-          }
-        }
-      ]
-    },
     {
       "name": "Blog",
       "tasks": [
