@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "summary": "พัฒนาเว็บไซต์กรณีศึกษา KUROKAWA Group และพัฒนาระบบโครงสร้างหมวดหมู่สินค้า OnesiamFactory",
+  "summary": "พัฒนาเว็บไซต์กรณีศึกษา KUROKAWA Group และพัฒนาระบบโครงสร้าง 12 หมวดหมู่สินค้า OnesiamFactory ทั้งฝั่ง Backoffice และ Frontend",
   "groups": [
     {
       "name": "Blog",
@@ -52,7 +52,24 @@
         {
           "name": "Frontend",
           "tasks": [
-            { "id": "fe1", "title": "ตัวอย่างงานฝั่ง Frontend", "status": "todo", "checked": false }
+            {
+              "id": "osf-fe-1",
+              "title": "พัฒนาระบบรองรับ 12 หมวดหมู่สินค้า และระบบหมวดแยกย่อย (Subcategories) ตาม Master Taxonomy V2.2",
+              "status": "done",
+              "checked": true,
+              "result": "เพิ่มโครงสร้าง Master Product Taxonomy 12 หมวดหมู่หลักพร้อมหมวดย่อยมาตรฐาน V2.2, ปรับปรุง Type ให้รองรับ subcategory, เพิ่มแถบตัวกรอง Subcategory Pills พร้อมซิงค์ผ่าน URL Query Parameter, แสดง Badge หมวดย่อยบนการ์ดสินค้า และแสดงข้อมูลหมวดย่อยพร้อมลิงก์ย้อนกลับในหน้ารายละเอียดสินค้า พร้อมทั้ง Push ขึ้น Branch แยก feature/product-12-categories-subcategories เรียบร้อย",
+              "notes": "ตรวจสอบ Typecheck ด้วย npx tsc --noEmit ผ่าน 100% ไม่มีข้อผิดพลาด และรักษาโครงสร้าง URL เดิมของทุกหมวดหมู่ เช่น /products/category/แผ่นฟาซาด เพื่อป้องกันผลกระทบด้าน SEO",
+              "tags": ["frontend", "taxonomy", "seo"],
+              "subtasks": [
+                { "title": "เพิ่มฟิลด์ subcategory ใน interface IProduct และ ICategoryInfo (src/types/product.type.ts)", "checked": true },
+                { "title": "ติดตั้ง Master Taxonomy 12 หมวดหมู่และหมวดย่อยมาตรฐาน V2.2 (src/data/productTaxonomy.ts, src/components/Products/productData.ts)", "checked": true },
+                { "title": "เพิ่มแถบเลือกหมวดย่อย (Subcategory Filter Pills) พร้อมปุ่มทั้งหมดในหมวดนี้ และระบบกรองสินค้าตามหมวดย่อย (src/pages/CategoryProductPage.tsx, src/components/Products/CategoryProductExperience.tsx)", "checked": true },
+                { "title": "ปรับปรุง Breadcrumbs สไตล์สถาปัตยกรรม: หน้าแรก > สินค้า > [หมวดหลัก] > [หมวดย่อย] (src/components/Products/CategoryProductExperience.tsx)", "checked": true },
+                { "title": "แสดง Badge หมวดย่อยบนการ์ดสินค้า (src/components/ProductCard.tsx, src/components/Products/CategoryProductExperience.tsx)", "checked": true },
+                { "title": "แสดงหมวดหลักคู่หมวดย่อยในหน้ารายละเอียดสินค้าพร้อมลิงก์ย้อนกลับ (src/pages/ProductDetail.tsx)", "checked": true },
+                { "title": "แตก Branch แยกและ Push ขึ้น Remote: feature/product-12-categories-subcategories", "checked": true }
+              ]
+            }
           ]
         }
       ]
