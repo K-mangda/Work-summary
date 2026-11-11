@@ -38,5 +38,6 @@ Get `<sha>` from `git rev-parse HEAD` after the commit.
 
 ## Gotchas
 - Push can be rejected when a teammate pushed first: run `git pull --rebase origin main`, then push again.
+- `git pull --rebase` fails with "You have unstaged changes" when run while files are modified. Run it before editing, or use `git pull --rebase --autostash origin main`.
 - The shell can block access to the project folder (EPERM / Permission denied). Report it to the user, do not work around it.
 - Append learned mistakes here (see skill-craft).
